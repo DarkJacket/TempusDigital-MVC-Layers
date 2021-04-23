@@ -1,0 +1,62 @@
+[
+  {
+    "Nome": "Fernanda",
+    "CPF": "11111111111",
+    "DataNascimento": "20/10/1997",
+    "RendaFamiliar": 1000
+  },
+  {
+    "Nome": "Douglas",
+    "CPF": "22222222222",
+    "DataNascimento": "13/07/1996",
+    "RendaFamiliar": 500
+  },
+  {
+    "Nome": "Marcos",
+    "CPF": "33333333333",
+    "DataNascimento": "15/02/1990",
+    "RendaFamiliar": 50000
+  },
+  {
+    "Nome": "Carlos",
+    "CPF": "44444444444",
+    "DataNascimento": "18/09/1980",
+    "RendaFamiliar": 8000
+  },
+  {
+    "Nome": "Marcela",
+    "CPF": "55555555555",
+    "DataNascimento": "26/01/1972",
+    "RendaFamiliar": 3000
+  },
+  {
+    "Nome": "Ricardo",
+    "CPF": "66666666666",
+    "DataNascimento": "22/08/1962",
+    "RendaFamiliar": 5592
+  },
+  {
+    "Nome": "Talita",
+    "CPF": "77777777777",
+    "DataNascimento": "14/08/1987",
+    "RendaFamiliar": 3333
+  },
+  {
+    "Nome": "Carla",
+    "CPF": "88888888888",
+    "DataNascimento": "12/05/1967",
+    "RendaFamiliar": 7235
+  },
+  {
+    "Nome": "Pedro",
+    "CPF": "99999999999",
+    "DataNascimento": "27/11/1997",
+    "RendaFamiliar": 13002
+  },
+  {
+    "Nome": "Pedro",
+    "CPF": "11111111110",
+    "DataNascimento": "22/01/2001",
+    "RendaFamiliar": 13002
+  }
+]

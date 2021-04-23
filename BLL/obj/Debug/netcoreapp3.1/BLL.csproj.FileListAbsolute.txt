@@ -1,0 +1,12 @@
+F:\Download\TempusDigital-main\TempusDigital-main\BLL\bin\Debug\netcoreapp3.1\BOL.dll
+F:\Download\TempusDigital-main\TempusDigital-main\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfoInputs.cache
+F:\Download\TempusDigital-main\TempusDigital-main\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfo.cs
+F:\Download\TempusDigital-main\TempusDigital-main\BLL\bin\Debug\netcoreapp3.1\BLL.deps.json
+F:\Download\TempusDigital-main\TempusDigital-main\BLL\bin\Debug\netcoreapp3.1\BLL.dll
+F:\Download\TempusDigital-main\TempusDigital-main\BLL\bin\Debug\netcoreapp3.1\BLL.pdb
+F:\Download\TempusDigital-main\TempusDigital-main\BLL\bin\Debug\netcoreapp3.1\BOL.pdb
+F:\Download\TempusDigital-main\TempusDigital-main\BLL\obj\Debug\netcoreapp3.1\BLL.csprojAssemblyReference.cache
+F:\Download\TempusDigital-main\TempusDigital-main\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CoreCompileInputs.cache
+F:\Download\TempusDigital-main\TempusDigital-main\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CopyComplete
+F:\Download\TempusDigital-main\TempusDigital-main\BLL\obj\Debug\netcoreapp3.1\BLL.dll
+F:\Download\TempusDigital-main\TempusDigital-main\BLL\obj\Debug\netcoreapp3.1\BLL.pdb

@@ -6,14 +6,15 @@ using System.Text;
 
 using BOL.Entity;
 using BOL.Interfaces.Repositories;
+using System.Linq.Expressions;
 
 namespace DAL.Repositories
 {
     public abstract class BaseRepository<TEntity> : IRepository<TEntity> where TEntity : BaseEntity
     {
 
-        protected readonly DbContext _context;
-        protected readonly DbSet<TEntity> _dbSet;
+        public readonly DbContext _context;
+        public readonly DbSet<TEntity> _dbSet;
 
         public BaseRepository(DbContext context)
         {
@@ -35,18 +36,23 @@ namespace DAL.Repositories
             _context.SaveChanges();
         }
 
+        public IQueryable<TEntity> Where(Expression<Func<TEntity, bool>> expression)
+        {
+            return _dbSet.Where(expression);
+        }
+
         public virtual void Delete(TEntity entity)
         {
             _dbSet.Remove(entity);
             _context.SaveChanges();
         }
 
-        public virtual IEnumerable<TEntity> GetAll()
+        public virtual IQueryable<TEntity> GetAll()
         {
-            return _dbSet.AsEnumerable();
+            return _dbSet;
         }
 
-        public virtual TEntity GetById(int id)
+        public virtual TEntity GetById(object id)
         {
             return _dbSet.Find(id);
         }

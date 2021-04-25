@@ -4,14 +4,14 @@
     "F:\\Download\\TempusDigital-main\\TempusDigital-main\\TempusDigital.Test\\TempusDigital.Test.csproj": {}
   },
   "projects": {
-    "F:\\Download\\TempusDigital-main\\TempusDigital-main\\TempusDigital.Test\\TempusDigital.Test.csproj": {
+    "F:\\Download\\TempusDigital-main\\TempusDigital-main\\BOL\\BOL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Download\\TempusDigital-main\\TempusDigital-main\\TempusDigital.Test\\TempusDigital.Test.csproj",
-        "projectName": "TempusDigital.Test",
-        "projectPath": "F:\\Download\\TempusDigital-main\\TempusDigital-main\\TempusDigital.Test\\TempusDigital.Test.csproj",
+        "projectUniqueName": "F:\\Download\\TempusDigital-main\\TempusDigital-main\\BOL\\BOL.csproj",
+        "projectName": "BOL",
+        "projectPath": "F:\\Download\\TempusDigital-main\\TempusDigital-main\\BOL\\BOL.csproj",
         "packagesPath": "C:\\Users\\Dougg\\.nuget\\packages\\",
-        "outputPath": "F:\\Download\\TempusDigital-main\\TempusDigital-main\\TempusDigital.Test\\obj\\",
+        "outputPath": "F:\\Download\\TempusDigital-main\\TempusDigital-main\\BOL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dougg\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,10 +39,140 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\Download\\TempusDigital-main\\TempusDigital-main\\DAL\\DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Download\\TempusDigital-main\\TempusDigital-main\\DAL\\DAL.csproj",
+        "projectName": "DAL",
+        "projectPath": "F:\\Download\\TempusDigital-main\\TempusDigital-main\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\Dougg\\.nuget\\packages\\",
+        "outputPath": "F:\\Download\\TempusDigital-main\\TempusDigital-main\\DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Dougg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "F:\\Download\\TempusDigital-main\\TempusDigital-main\\BOL\\BOL.csproj": {
+                "projectPath": "F:\\Download\\TempusDigital-main\\TempusDigital-main\\BOL\\BOL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[3.1.14, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\Download\\TempusDigital-main\\TempusDigital-main\\TempusDigital.Test\\TempusDigital.Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Download\\TempusDigital-main\\TempusDigital-main\\TempusDigital.Test\\TempusDigital.Test.csproj",
+        "projectName": "TempusDigital.Test",
+        "projectPath": "F:\\Download\\TempusDigital-main\\TempusDigital-main\\TempusDigital.Test\\TempusDigital.Test.csproj",
+        "packagesPath": "C:\\Users\\Dougg\\.nuget\\packages\\",
+        "outputPath": "F:\\Download\\TempusDigital-main\\TempusDigital-main\\TempusDigital.Test\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Dougg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "F:\\Download\\TempusDigital-main\\TempusDigital-main\\DAL\\DAL.csproj": {
+                "projectPath": "F:\\Download\\TempusDigital-main\\TempusDigital-main\\DAL\\DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.7.1, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.16.1, )"
             },
             "coverlet.collector": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

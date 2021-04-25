@@ -13,6 +13,7 @@ namespace DAL
     public class TempusDigitalContext : DbContext
     {
         public TempusDigitalContext(DbContextOptions options) : base(options) { }
+        public TempusDigitalContext() { }
 
 
         public DbSet<Cliente> Cliente { get; set; }

@@ -6,18 +6,19 @@ using System.IO;
 
 using Nancy.Json;
 using BOL.Entity;
+using BOL.DTO;
 
 namespace BLL.Helper
 {
     public static class FileJson
     {
 
-        public static Cliente[] FileJsonToClienteDb()
+        public static ClienteIODTO[] FileJsonToClienteDb()
         {
             var text = File.ReadAllText("Clientes.json");
 
             var json = new JavaScriptSerializer();
-            Cliente[] clientes = json.Deserialize<Cliente[]>(text);
+            ClienteIODTO[] clientes = json.Deserialize<ClienteIODTO[]>(text);
 
             return clientes;
         }

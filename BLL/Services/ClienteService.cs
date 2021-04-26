@@ -40,7 +40,7 @@ namespace BLL.Services
         {
             try
             {
-                var client = new Cliente(cliente.Nome, cliente.CPF, cliente.DataNascimento, cliente.RendaFamiliar);
+                var client = new Cliente(cliente.Nome, cliente.CPF, cliente.DataNascimento.ToDateTime(), cliente.RendaFamiliar);
 
                 _clienteRepo.Add(client);
 

@@ -15,7 +15,24 @@ namespace DAL.Map
 
             builder.HasKey(c => c.Id);
 
-            builder.HasKey(c => c.CPF);
+            builder.HasAlternateKey(c => c.CPF);
+
+            builder.Property(c => c.DataCadastro)
+                .HasColumnType("date")
+                .IsRequired();
+
+            builder.Property(c => c.DataNascimento)
+                .HasColumnType("date")
+                .IsRequired();
+
+            builder.Property(c => c.Nome)
+                .HasColumnType("varchar(100)")
+                .IsRequired();
+
+            builder.Property(c => c.RendaFamiliar)
+               .IsRequired();
+
+
         }
     }
 }

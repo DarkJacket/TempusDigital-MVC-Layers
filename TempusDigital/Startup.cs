@@ -87,10 +87,10 @@ namespace TempusDigital
 
             var clientList = FileJson.FileJsonToClienteDb();
 
-            using var clienteRepo = serviceProvider.GetService<IClienteRepository>();
+            var clienteRepo = serviceProvider.GetService<IClienteRepository>();
                 if (!clienteRepo.FindIfCpfIsUse(clientList[0].CPF))
                 {
-                    clienteRepo.AddRange(clientList);
+                    clienteRepo.AddRange(clientList.ToListClienteEntity());
                 }
 
 

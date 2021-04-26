@@ -1,11 +1,9 @@
-﻿
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-using DAL.Repositories;
 using BOL.Entity;
 using BOL.Interfaces.Repositories;
 
@@ -16,12 +14,6 @@ namespace DAL.Repositories
         public ClienteRepository(DbContext context) : base(context)
         {
         }
-
-        public IEnumerable<Cliente> FilterAllByName(string nome)
-        {
-            return _dbSet.Where(c => c.Nome.Contains(nome)).ToList();
-        }
-
 
         public override void Add(Cliente cliente)
         {

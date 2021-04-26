@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BLL.Helper;
-using BOL.DTO;
-using BOL.Entity;
-using BOL.Interfaces.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using TempusDigital.Models;
+
+using BOL.DTO;
+using BOL.Interfaces.Services;
+
 
 
 namespace TempusDigital.Api
@@ -17,42 +16,32 @@ namespace TempusDigital.Api
     [ApiController]
     public class ClienteController : ControllerBase
     {
-        private readonly IClienteRepository clienteRepo;
+        
+        private readonly IClienteService _clienteService;
 
-        public ClienteController(IClienteRepository clienteRepo)
+        public ClienteController(IClienteService clienteService)
         {
-            this.clienteRepo = clienteRepo;
+            _clienteService = clienteService;
         }
 
         [HttpGet]
         public IActionResult GetAllCliente()
         {
-            return Ok(clienteRepo.GetAll());
+            return Ok(_clienteService.GetAllCliente());
         }
 
         [HttpGet("Brief")]
         public IActionResult GetAllClienteBrief([FromQuery]string nome)
         {
-            if (String.IsNullOrWhiteSpace(nome))
-                return Ok(clienteRepo
-                    .GetAll()
-                    .ToListClienteBrief());
-            
-            return Ok(clienteRepo
-                .FilterAllByName(nome)
-                .ToListClienteBrief());
+            return Ok(_clienteService.GetClienteBriefWhereNameIsEqualOrReturnAll(nome));
         }
 
         [HttpPost]
         public IActionResult AddCliente([FromHeader]ClienteDTO cliente)
         {
+            _clienteService.AddCliente(cliente);
 
-            var client = new Cliente(cliente.Nome, cliente.CPF, cliente.DataNascimento, cliente.RendaFamiliar);
-
-            clienteRepo.Add(client);
-
-
-            return Ok(client);
+            return Ok();
         }
     }
 }

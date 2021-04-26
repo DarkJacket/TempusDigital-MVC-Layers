@@ -24,7 +24,7 @@ namespace BLL.Services
             return _clienteRepo.GetAll().ToListClienteBrief();
         }
 
-        public IEnumerable<ClienteBriefDTO> GetAllClienteBrief(string nome)
+        public IEnumerable<ClienteBriefDTO> GetClienteBriefWhereNameIsEqualOrReturnAll(string nome)
         {
             if (String.IsNullOrWhiteSpace(nome))
                 return _clienteRepo
@@ -32,7 +32,7 @@ namespace BLL.Services
                     .ToListClienteBrief();
 
             return _clienteRepo
-                .FilterAllByName(nome)
+                .Where(c => c.Nome.Contains(nome))
                 .ToListClienteBrief();
         }
 

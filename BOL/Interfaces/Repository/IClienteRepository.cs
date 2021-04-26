@@ -11,7 +11,6 @@ namespace BOL.Interfaces.Repositories
 {
     public interface IClienteRepository : IRepository<Cliente>, IDisposable
     {
-        public IEnumerable<Cliente> FilterAllByName(string nome);
         bool FindIfCpfIsUse(string cpf);
     }
 }

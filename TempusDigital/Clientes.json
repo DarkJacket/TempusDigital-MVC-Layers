@@ -15,7 +15,7 @@
     "Nome": "Marcos",
     "CPF": "33333333333",
     "DataNascimento": "15/02/1990",
-    "RendaFamiliar": 50000
+    "RendaFamiliar": 5000
   },
   {
     "Nome": "Carlos",
@@ -26,7 +26,7 @@
   {
     "Nome": "Marcela",
     "CPF": "55555555555",
-    "DataNascimento": "26/01/1972",
+    "DataNascimento": "26/01/2009",
     "RendaFamiliar": 3000
   },
   {
@@ -45,7 +45,7 @@
     "Nome": "Carla",
     "CPF": "88888888888",
     "DataNascimento": "12/05/1967",
-    "RendaFamiliar": 7235
+    "RendaFamiliar": 935
   },
   {
     "Nome": "Pedro",
@@ -57,6 +57,12 @@
     "Nome": "Pedro",
     "CPF": "11111111110",
     "DataNascimento": "22/01/2001",
-    "RendaFamiliar": 13002
+    "RendaFamiliar": 1002
+  },
+  {
+    "Nome": "Chaves",
+    "CPF": "11211115110",
+    "DataNascimento": "22/01/2010",
+    "RendaFamiliar": 203
   }
 ]

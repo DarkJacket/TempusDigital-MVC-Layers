@@ -1,4 +1,8 @@
 ﻿
+
+@model BOL.DTO.IndexDTO;
+
+
 <section>
     <div class="card">
 
@@ -10,12 +14,12 @@
                 <div class="row justify-content-around">
 
                     <div class="card-text">
-                        <p class="card-text">100</p>
+                        <p class="card-text">@Model.TotalClientes</p>
                     </div>
                     <ul>
-                        <li>Classe A: 10</li>
-                        <li>Classe B: 20</li>
-                        <li>Classe C: 40</li>
+                        <li>Classe <small class="money-badge green">A</small> : @Model.ClientesClasseA</li>
+                        <li>Classe <small class="money-badge yellow">B</small>: @Model.ClientesClasseB</li>
+                        <li>Classe <small class="money-badge red">C</small>: @Model.ClientesClasseC</li>
                     </ul>
 
                 </div>
@@ -24,14 +28,14 @@
 
             <div class="bg-white col-3 mx-1">
                 <h5 class="card-title">Maior Que 18</h5>
-                <p class="card-text">50</p>
+                <p class="card-text">@Model.ClientesBiggerThanEighteen</p>
             </div>
 
             <div class="bg-white col-3 mx-1">
                 <h5 class="card-title">
                     Maior que 18 anos e com Renda maior que a media
                 </h5>
-                <p class="card-text">20</p>
+                <p class="card-text"> @Model.NumbersOfClientesBiggerThanEighteenWithRendaFamiliarBiggerThenMedia </p>
             </div>
 
 

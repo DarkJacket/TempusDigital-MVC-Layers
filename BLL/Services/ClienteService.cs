@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 using BLL.Helper;
@@ -46,11 +47,53 @@ namespace BLL.Services
 
             _clienteRepo.Add(client);
             
-            
-
         }
 
-        
+        public IndexDTO GetIndexDTO()
+        {
+
+            var classABC = GetNumbersOfClientesByClasse();
+
+            var numberClientes = classABC.Sum(c => c);
+
+            return new IndexDTO(classABC[0], classABC[1], classABC[2], GetNumbersOfClientesBiggerThanEighteenWithRendaFamiliarBiggerThenMedia(), numberClientes, GetNumbersOfClientesBiggerThanEighteen());
+        }
+
+        private int GetNumbersOfClientesBiggerThanEighteen()
+        {
+            return GetClientesBiggerThanEighteen().Count();
+        }
+
+        private int GetNumbersOfClientesBiggerThanEighteenWithRendaFamiliarBiggerThenMedia()
+        {
+
+
+            var clientes = _clienteRepo.GetAll();
+
+            var media = clientes.Sum(c => c.RendaFamiliar) / clientes.Count();
+
+            var value = GetClientesBiggerThanEighteen()
+                .Where(c => (DateTime.Now - c.DataNascimento).TotalDays / 365 > 18.00 && c.RendaFamiliar > media)
+                .Count();
+
+
+            return value;
+        }
+
+        private IEnumerable<Cliente> GetClientesBiggerThanEighteen()
+        {
+            return _clienteRepo.GetAll().ToList().Where(c => (DateTime.Now - c.DataNascimento).TotalDays / 365 > 18.00);
+        }
+
+        private int[] GetNumbersOfClientesByClasse()
+        {
+            var clientes = _clienteRepo.GetAll();
+
+            var classA = clientes.Where(c => c.RendaFamiliar >= 2500).Count();
+            var classB = clientes.Where(c => c.RendaFamiliar < 2500 && c.RendaFamiliar >= 1000).Count();
+            var classC = clientes.Where(c => c.RendaFamiliar < 1000).Count();
+            return new int[3] { classA, classB, classC };
+        }
 
     }
 }

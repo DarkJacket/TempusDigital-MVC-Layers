@@ -49,7 +49,7 @@ namespace DAL.Repositories
 
         public virtual IQueryable<TEntity> GetAll()
         {
-            return _dbSet;
+            return _dbSet.AsQueryable();
         }
 
         public virtual TEntity GetById(object id)

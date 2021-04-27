@@ -21,7 +21,7 @@ namespace TempusDigital.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(_clienteService.GetIndexDTO());
 
         }
 

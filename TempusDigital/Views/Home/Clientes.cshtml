@@ -1,15 +1,43 @@
 ﻿
 
-
+@model List<BOL.DTO.ClienteBriefDTO>
 
 <section>
 
-    <form class="form my-2 my-lg-0">
-        <input id="search-by-name" class="form-control mr-sm-2" type="search" placeholder="Find By Name" aria-label="Search">
+    <form class="form my-2 my-lg-0" asp-action="Clientes" method="get">
+        <p>
+            <input class="form-control mr-sm-2" type="text" placeholder="Find By Name" name="filter">
+        </p>
     </form>
 
-    <div class="mt-5" id="Lista">
 
+    <div class="mt-5">
+        <ul class="list-group list-group-flush">
+
+            @{ foreach (var item in Model)
+                            {
+                <li class="list-group-item">
+                    @item.Nome
+
+                    @{ 
+                        
+                        var badge = "";
+
+                        if (item.RendaFamiliar > 1000)
+                            badge = "green";
+                        else if (item.RendaFamiliar > 500)
+                            badge = "yellow";
+                        else
+                            badge = "red"; }
+
+
+                    <small class="money-badge @badge">
+                        @item.RendaFamiliar
+                    </small>
+                </li> } 
+            }
+
+        </ul>
     </div>
 
 </section>

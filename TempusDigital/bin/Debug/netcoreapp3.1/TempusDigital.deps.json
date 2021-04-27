@@ -1827,6 +1827,7 @@
       },
       "DAL/1.0.0": {
         "dependencies": {
+          "BLL": "1.0.0",
           "BOL": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.0",
           "Microsoft.EntityFrameworkCore.Relational": "5.0.0"

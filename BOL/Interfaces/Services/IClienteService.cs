@@ -10,7 +10,9 @@ namespace BOL.Interfaces.Services
 
         IEnumerable<ClienteBriefDTO> GetAllCliente();
         IEnumerable<ClienteBriefDTO> GetClienteBriefWhereNameIsEqualOrReturnAll(string nome);
-        bool AddCliente(ClienteDTO cliente);
+        void AddCliente(ClienteDTO cliente);
+
+
 
     }
 }

@@ -10,3 +10,5 @@ F:\Download\TempusDigital-main\TempusDigital-main\DAL\obj\Debug\netcoreapp3.1\DA
 F:\Download\TempusDigital-main\TempusDigital-main\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CopyComplete
 F:\Download\TempusDigital-main\TempusDigital-main\DAL\obj\Debug\netcoreapp3.1\DAL.dll
 F:\Download\TempusDigital-main\TempusDigital-main\DAL\obj\Debug\netcoreapp3.1\DAL.pdb
+F:\Download\TempusDigital-main\TempusDigital-main\DAL\bin\Debug\netcoreapp3.1\BLL.dll
+F:\Download\TempusDigital-main\TempusDigital-main\DAL\bin\Debug\netcoreapp3.1\BLL.pdb

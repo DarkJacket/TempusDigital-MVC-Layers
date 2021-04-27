@@ -146,6 +146,9 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
+              "F:\\Download\\TempusDigital-main\\TempusDigital-main\\BLL\\BLL.csproj": {
+                "projectPath": "F:\\Download\\TempusDigital-main\\TempusDigital-main\\BLL\\BLL.csproj"
+              },
               "F:\\Download\\TempusDigital-main\\TempusDigital-main\\BOL\\BOL.csproj": {
                 "projectPath": "F:\\Download\\TempusDigital-main\\TempusDigital-main\\BOL\\BOL.csproj"
               }

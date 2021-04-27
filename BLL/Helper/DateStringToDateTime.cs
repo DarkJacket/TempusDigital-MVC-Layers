@@ -12,17 +12,29 @@ namespace BLL.Helper
         {
             try
             {
-                int[] datasplit = date
-               .Split('/')
-               .Select(s => int.Parse(s))
-               .ToArray();
+                int[] datasplit;
+
+                if (date.Contains('-'))
+                {
+                    datasplit = date
+                      .Split('-')
+                      .Select(s => int.Parse(s))
+                      .ToArray();
+
+                    return new DateTime(datasplit[0], datasplit[1], datasplit[2]);
+                }
+
+                datasplit = date
+                      .Split('/')
+                      .Select(s => int.Parse(s))
+                      .ToArray();
 
                 return new DateTime(datasplit[2], datasplit[1], datasplit[0]);
             }
             catch (Exception)
             {
 
-                return new DateTime(0, 0, 0);
+                return new DateTime(0);
             }
             
         }

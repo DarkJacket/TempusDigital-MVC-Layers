@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using System.IO;
 
 using Nancy.Json;
-using BOL.Entity;
 using BOL.DTO;
 
 namespace BLL.Helper
@@ -13,12 +12,12 @@ namespace BLL.Helper
     public static class FileJson
     {
 
-        public static ClienteIODTO[] FileJsonToClienteDb()
+        public static ClienteDTO[] FileJsonToClienteDb()
         {
             var text = File.ReadAllText("Clientes.json");
 
             var json = new JavaScriptSerializer();
-            ClienteIODTO[] clientes = json.Deserialize<ClienteIODTO[]>(text);
+            ClienteDTO[] clientes = json.Deserialize<ClienteDTO[]>(text);
 
             return clientes;
         }

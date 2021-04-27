@@ -20,12 +20,12 @@ namespace BLL.Helper
             return cliente.Select(c => c.ToClienteBrief()).ToList();
         }
 
-        public static Cliente ToClienteEntity(this ClienteIODTO cliente)
+        public static Cliente ToClienteEntity(this ClienteDTO cliente)
         {
             return new Cliente(cliente.Nome, cliente.CPF, cliente.DataNascimento.ToDateTime(), cliente.RendaFamiliar);
         }
 
-        public static List<Cliente> ToListClienteEntity(this IEnumerable<ClienteIODTO> cliente)
+        public static List<Cliente> ToListClienteEntity(this IEnumerable<ClienteDTO> cliente)
         {
             return cliente.Select(c => c.ToClienteEntity()).ToList();
         }

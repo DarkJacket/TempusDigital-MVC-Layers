@@ -36,23 +36,21 @@ namespace BLL.Services
                 .ToListClienteBrief();
         }
 
-        public bool AddCliente(ClienteDTO cliente)
+        public void AddCliente(ClienteDTO cliente)
         {
-            try
-            {
-                var client = new Cliente(cliente.Nome, cliente.CPF, cliente.DataNascimento.ToDateTime(), cliente.RendaFamiliar);
+            
+            
+            var client = new Cliente(cliente.Nome, cliente.CPF, cliente.DataNascimento.ToDateTime(), cliente.RendaFamiliar);
 
-                _clienteRepo.Add(client);
+            client.DataCadastro = DateTime.Now;
 
-                return true;
-            }
-            catch (Exception)
-            {
-
-                return false;
-            }
+            _clienteRepo.Add(client);
+            
+            
 
         }
+
+        
 
     }
 }
